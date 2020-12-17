@@ -8,11 +8,11 @@ window.addEventListener('scroll', () => {
     let scrollValue = window.pageYOffset / document.body.offsetHeight
     if(scrollValue > 0.5){
         for (skill of skills){
-            skill.style.animation = "flicker-in 2s linear both";
+            skill.style.animation = "flicker-in 4s linear both";
         }
     }
     if (scrollValue > 0.8){
-            contact.style.animation = "fade-in 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+            contact.style.animation = "fade-in 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
     }
    
   });
