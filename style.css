@@ -16,6 +16,7 @@
     height: 100%;
     position: fixed;
     filter:blur(0.8px);
+    background:url("./img/bg.jpg");
 }
 .header_content{
     width: 100%;
@@ -162,10 +163,24 @@ ul{
   font-size: 1vw;
 }
 
-/* Mobile Version */
+/* Background Screen Version */
+@media only screen and (max-width: 1024px) {
+  .bg{
+    background:url("./img/bg1024.jpg");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg{
+    background:url("./img/bg600.jpg");
+  }
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  .bg{
+    background:url("./img/bg768.jpg");
+  }
   .pp_container {
     width: 40vw;
     height: 30vh;
