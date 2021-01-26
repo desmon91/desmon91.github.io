@@ -6,7 +6,7 @@ let skill_length = 5;
 let animate = true;
 
 window.addEventListener('scroll', () => {
-    let scrollValue = window.scrollY / document.body.scrollHeight
+    let scrollValue = window.pageYOffset / document.body.offsetHeight
     let screen = document.body.offsetWidth
     
     if(scrollValue > 0.1 && animate && screen > 768){
@@ -14,8 +14,14 @@ window.addEventListener('scroll', () => {
             let skill = document.querySelector(`.skill-${i}`)
             skill.style.animation = `fadeIn 2s linear both`;
         }
-        animate = false
     }
+    else {
+        for(let i = 1; i<=skill_length;i++){
+            let skill = document.querySelector(`.skill-${i}`)
+            skill.style.animation = `2s fadeIn forwards`;
+        }
+    }
+    animate = false
   });
 
 function typing () {
