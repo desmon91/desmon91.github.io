@@ -1,37 +1,28 @@
-let i = 0;
-let text = "Hi, my name is Desmond.";
-let speed = 125;
-const skills = document.querySelectorAll(".skill")
-const contact = document.querySelector(".contact_content")
+let initial_text_length = 0;
+let typing_speed = 125;
+let text = "Hello, I'm Desmond";
+let delay = 4000;
+let skill_length = 5;
 let animate = true;
 
 window.addEventListener('scroll', () => {
-    let scrollValue = window.pageYOffset / document.body.offsetHeight
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
-      }
-    let animationArr = []
-    for(let i = 0; i < skills.length; i++ ){
-        animationArr.push(getRandomInt(3))
-    }
-    if(scrollValue > 0.5 && animate){
-        for(let i = 0; i < skills.length; i++ ){
-             skills[i].style.animation = `flicker-in${animationArr[i]} 3.5s linear both`;
+    let scrollValue = window.scrollY / document.body.scrollHeight
+    let screen = document.body.offsetWidth
+    
+    if(scrollValue > 0.1 && animate && screen > 768){
+        for(let i = 1; i<=skill_length;i++){
+            let skill = document.querySelector(`.skill-${i}`)
+            skill.style.animation = `fadeIn 2s linear both`;
         }
         animate = false
     }
-    if (scrollValue > 0.8){
-           return contact.style.animation = "fade-in 3s linear both";
-    }
-   
   });
 
 function typing () {
-    if (i < text.length){
-        document.getElementById("txt").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, speed);
+    if (initial_text_length < text.length){
+        document.getElementById("txt").innerHTML += text.charAt(initial_text_length);
+        initial_text_length++;
+        setTimeout(typing, typing_speed);
     }
 }
-
-typing()
+setTimeout(typing,delay)
