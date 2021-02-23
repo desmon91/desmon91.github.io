@@ -1,843 +1,542 @@
-@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&family=Gochi+Hand&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
 
-@keyframes fadeOut {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 0%;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    left: -400px;
-    opacity: 0%;
-  }
-  20% {
-    left: 0px;
-    opacity: 100%;
-  }
-  50% {
-    left: 0px;
-    opacity: 100%;
-  }
-  80% {
-    left: -400px;
-    opacity: 0%;
-  }
-  100% {
-    left: -400px;
-    opacity: 0%;
-  }
+:root {
+  --screenWidth: 100vw;
+  --screenHeight: 2620px;
 }
 
 * {
-  padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  width: var(--screenWidth);
 }
 
-.container {
-  position: relative;
-  width: 1366px;
-  background: #fafafa;
-  margin: auto;
-}
-
-.header_container {
-  position: absolute;
-  height: 640px;
-  left: 0px;
-  right: 0px;
+nav {
+  position: sticky;
+  z-index: 99;
+  height: 100px;
+  width: 100%;
   top: 0px;
-  background: linear-gradient(270.75deg, #cce0ff -18.13%, #afecd6 47.66%);
-}
-.separator {
-  position: absolute;
-  height: 0px;
-  left: 0px;
-  right: 0px;
-  top: 639px;
-  border: 2px solid #000000;
-}
-.separator-2 {
-  position: absolute;
-  width: 0px;
-  height: 632px;
-  left: 620px;
-  top: 763px;
 
-  border: 5px solid #000000;
-}
-.flash {
-  position: absolute;
-  width: 628.97px;
-  height: 607px;
-  left: -62px;
-  top: 109px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #ffffff 0%,
-    rgba(196, 196, 196, 0) 100%
-  );
-  opacity: 0;
-  animation: fadeOut ease-in-out 2s;
-  animation-delay: 0.8s;
-}
-.hand {
-  position: absolute;
-  width: 504px;
-  height: 395px;
-  left: 0px;
-  top: 245px;
-  left: -400px;
-  background: url(./img/hand.png);
-  opacity: 0;
-  animation: slideIn ease-in-out 4s forwards;
-}
-.profile {
-  position: absolute;
-  width: 674px;
-  height: 585.92px;
-  left: 0px;
-  top: 53.81px;
-  background: url(./img/profile.png);
-  opacity: 0;
-  animation: fadeIn 4.5s forwards;
-  animation-delay: 2.5s;
-}
-.bg {
-  position: absolute;
-  width: 1366px;
-  height: 640px;
-  background: url(./img/bg.png);
-}
-.title {
-  position: absolute;
-  width: 500px;
-  height: 549px;
-  left: 809px;
-  top: 81px;
-  font-family: Skranji;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 120px;
-  line-height: 163px;
+  background: #cdf5e8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   display: flex;
-  align-items: center;
-
-  color: #000000;
-
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: space-around;
 }
 
-.skill-1 {
-  position: absolute;
-  height: 144px;
-  left: 671px;
-  right: 40px;
-  top: 616px;
-  background: #cce0ff;
-  border: 3px solid #0092b3;
-  box-sizing: border-box;
-  border-radius: 20px;
+nav > a {
+  width: 313.43px;
+  height: 98px;
 
-  font-family: Lobster;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 90px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  color: #000000;
-  opacity: 0;
-}
-.skill-2 {
-  position: absolute;
-  height: 144px;
-  left: 671px;
-  right: 40px;
-  top: 804px;
-  background: #cce0ff;
-  border: 3px solid #0092b3;
-  box-sizing: border-box;
-  border-radius: 20px;
-
-  font-family: Lobster;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 90px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  color: #000000;
-  opacity: 0;
-}
-.skill-3 {
-  position: absolute;
-  height: 144px;
-  left: 671px;
-  right: 40px;
-  top: 983px;
-  background: #cce0ff;
-  border: 3px solid #0092b3;
-  box-sizing: border-box;
-  border-radius: 20px;
-
-  font-family: Lobster;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 90px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  color: #000000;
-  opacity: 0;
-}
-.skill-4 {
-  position: absolute;
-  height: 144px;
-  left: 671px;
-  right: 40px;
-  top: 1171px;
-  background: #cce0ff;
-  border: 3px solid #0092b3;
-  box-sizing: border-box;
-  border-radius: 20px;
-
-  font-family: Lobster;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 90px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  color: #000000;
-  opacity: 0;
-}
-.skill-5 {
-  position: absolute;
-  height: 144px;
-  left: 671px;
-  right: 40px;
-  top: 1359px;
-  background: #cce0ff;
-  border: 3px solid #0092b3;
-  box-sizing: border-box;
-  border-radius: 20px;
-
-  font-family: Lobster;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 90px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  color: #000000;
-  opacity: 0;
-}
-.hit {
-  position: absolute;
-  height: 184px;
-  left: 55px;
-  right: 832px;
-  top: 671px;
-
-  font-family: Carter One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 96px;
-  line-height: 148px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #000000;
-}
-a:link,
-a:visited {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  color: red;
-}
-.link-1 {
-  position: absolute;
-  width: 502px;
-  height: 100px;
-  left: 56px;
-  top: 945px;
-  display: flex;
-  justify-content: space-between;
-}
-.link-2 {
-  position: absolute;
-  width: 502px;
-  height: 100px;
-  left: 56px;
-  top: 1067px;
-  display: flex;
-  justify-content: space-between;
-}
-.link-3 {
-  position: absolute;
-  width: 502px;
-  height: 100px;
-  left: 56px;
-  top: 1189px;
-  display: flex;
-  justify-content: space-between;
-}
-.icon {
-  width: 100px;
-  height: 100px;
-}
-.text-link {
-  width: 365px;
-  font-family: Open Sans;
+  font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
-  line-height: 87px;
+  font-size: 3rem;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+
+  color: #000000;
 }
+
+nav > a:hover {
+  transform: scale(1.1);
+}
+
+nav > a:active {
+  transform: scale(1);
+}
+
+.body-container {
+  position: relative;
+  width: 100%;
+  height: var(--screenHeight);
+
+  background: linear-gradient(180deg, #cdf5e8 21.88%, #ffc5eb 100%);
+}
+
+.anchor {
+  display: inline-block;
+  height: 100px;
+  margin-top: -100px;
+  visibility: hidden;
+}
+.header {
+  height: 585px;
+  width: 100%;
+
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.id-card {
+  width: 1234px;
+  height: 585px;
+  background: url("/img/id-card.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  margin-top: 60px;
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.id-profile {
+  width: 488px;
+  height: 488px;
+  background: url("img/id-profile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: blinking 20s infinite ease-in-out both;
+}
+
+.id-name {
+  height: 80%;
+  width: 100%;
+  font-family: Gochi Hand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 7rem;
+  line-height: 132px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.1em;
+
+  color: #303030;
+}
+
+.roles-container {
+  position: absolute;
+  width: var(--screenWidth);
+  height: 1512px;
+  left: 0px;
+  top: 713px;
+}
+
+.roles-title-line {
+  position: absolute;
+  width: 398px;
+  height: 36px;
+  top: 34px;
+
+  background: #9fc6ff;
+}
+
+.roles-title {
+  position: absolute;
+  height: 62px;
+  left: 33px;
+  right: 0px;
+  top: 10px;
+
+  font-family: Gochi Hand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5rem;
+  line-height: 113px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.roles-card-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roles-card {
+  height: 446px;
+  width: 95%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.roles-card-padding {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.roles-body {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roles-subtitle {
+  width: 100%;
+  height: 100%;
+
+  font-family: Boogaloo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 76px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  color: #000000;
+}
+.roles-text {
+  width: 100%;
+  height: 100%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  color: #000000;
+}
+.roles-img {
+  width: 30%;
+  height: 70%;
+}
+
+.contact-container {
+  position: absolute;
+  width: var(--screenWidth);
+  height: 262px;
+  left: 0px;
+  top: 2302px;
+}
+
+.contact-title-line {
+  position: absolute;
+  width: 529px;
+  height: 36px;
+  top: 52px;
+}
+
+.contact-title {
+  position: absolute;
+  height: 125px;
+  left: 30px;
+  right: 10px;
+  top: 0px;
+
+  font-family: Gochi Hand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5rem;
+  line-height: 113px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.link-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-card {
+  width: 95%;
+  height: 123px;
+
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.link-item {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.link-item:hover {
+  transform: scale(1.1);
+}
+.link-item:active {
+  transform: scale(1);
+}
+
+.link-text {
+  font-family: Boogaloo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 76px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
 .footer {
   position: absolute;
-  height: 39px;
-  width: 1366px;
-  top: 1554px;
-
+  height: 37px;
+  left: 0px;
+  right: 1px;
+  top: 2583px;
   border: 1px solid #000000;
+  border-width: 1px 1px 0 1px;
   box-sizing: border-box;
+}
+
+.footer span {
+  position: absolute;
+  width: var(--screenWidth);
+  height: 37px;
 
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 26px;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
+
   color: #000000;
 }
 
-@media only screen and (max-width: 1280px) {
-  .container,
-  .bg,
-  .footer {
-    width: 1280px;
+@keyframes blinking {
+  0% {
+    background: url("img/id-profile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .title {
-    left: 727px;
-    right: -60px;
+  1% {
+    background: url("img/id-profile_closed.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .hit {
-    right: 739px;
+  1.1% {
+    background: url("img/id-profile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .separator-2 {
-    left: 589px;
+  20% {
+    background: url("img/id-profile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .skill-1,
-  .skill-2,
-  .skill-3,
-  .skill-4,
-  .skill-5 {
-    left: 628px;
+  20.1% {
+    background: url("img/id-profile_closed.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .link-1,
-  .link-2,
-  .link-3 {
-    font-size: 48px;
+  20.2% {
+    background: url("img/id-profile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-}
-
-@media only screen and (max-width: 1024px) {
-  .container,
-  .bg,
-  .footer {
-    width: 1024px;
+  49.9% {
+    background: url("img/id-profile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  #txt.title {
-    width: 357px;
-    height: 549px;
-    left: 625px;
-    right: 42px;
-    font-size: 86px;
-    line-height: 117px;
+  50% {
+    background: url("img/id-profile_closed.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .hit {
-    left: 29px;
-    right: 615px;
-    top: 742px;
-    font-size: 72px;
-    line-height: 111px;
+  50.1% {
+    background: url("img/id-profile_smile_closed.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .separator-2 {
-    left: 452px;
+  50.2% {
+    background: url("img/id-profile_smile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .skill-1,
-  .skill-2,
-  .skill-3,
-  .skill-4,
-  .skill-5 {
-    left: 500px;
-    font-size: 48px;
-    line-height: 60px;
+  70% {
+    background: url("img/id-profile_smile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .icon {
-    width: 80px;
-    height: 80px;
+  70.1% {
+    background: url("img/id-profile_smile_closed.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .link-1,
-  .link-2,
-  .link-3 {
-    width: 329px;
-    font-size: 36px;
-    line-height: 49px;
+  70.2% {
+    background: url("img/id-profile_smile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 768px;
-    height: 1121px;
+  99.9% {
+    background: url("img/id-profile_smile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .bg {
-    height: 480px;
-    width: 768px;
-    background: url("./img/bg_768.png");
-  }
-  .header_container {
-    height: 480px;
-    width: 768px;
-  }
-  .flash {
-    width: 467.33px;
-    height: 451px;
-    left: -75px;
-    top: 111px;
-  }
-  .hand {
-    width: 316.44px;
-    height: 248px;
-    left: 0px;
-    top: 232px;
-    left: -400px;
-    background: url("./img/hand_768.png");
-  }
-  .footer {
-    height: 20.8px;
-    left: 0px;
-    right: 0px;
-    top: 1101.1px;
-    width: 768px;
-    font-size: 12px;
-    line-height: 15px;
-  }
-  .profile {
-    width: 486.28px;
-    height: 422.74px;
-    left: 0px;
-    top: 57px;
-    background: url("./img/profile_768.png");
-  }
-  #txt.title {
-    width: 250px;
-    height: 427px;
-    left: 470px;
-    top: 32px;
-    font-size: 64px;
-    line-height: 87px;
-  }
-  .hit {
-    height: 184px;
-    left: 14px;
-    right: 481px;
-    top: 487px;
-    font-size: 55px;
-    line-height: 85px;
-  }
-  .separator {
-    height: 0px;
-    left: 0px;
-    right: 0px;
-    top: 480px;
-  }
-  .separator-2 {
-    height: 477px;
-    left: 332.51px;
-    top: 573px;
-    border: 2px solid #000000;
-  }
-  .skill-1 {
-    height: 100px;
-    left: 372px;
-    right: 40px;
-    top: 441px;
-    font-size: 36px;
-    line-height: 45px;
-  }
-  .skill-2 {
-    height: 100px;
-    left: 372px;
-    right: 40px;
-    top: 577px;
-    font-size: 36px;
-    line-height: 45px;
-  }
-  .skill-3 {
-    height: 100px;
-    left: 372px;
-    right: 40px;
-    top: 713px;
-    font-size: 36px;
-    line-height: 45px;
-  }
-  .skill-4 {
-    height: 100px;
-    left: 372px;
-    right: 40px;
-    top: 849px;
-    font-size: 36px;
-    line-height: 45px;
-  }
-  .skill-5 {
-    height: 100px;
-    left: 372px;
-    right: 40px;
-    top: 985px;
-    font-size: 36px;
-    line-height: 45px;
-  }
-  .icon {
-    width: 50px;
-    height: 50px;
-  }
-  .text-link {
-    font-size: 36px;
-    line-height: 49px;
-  }
-  .link-1 {
-    width: 261px;
-    height: 55.15px;
-    left: 16px;
-    top: 674.85px;
-  }
-  .link-2 {
-    width: 259px;
-    height: 53.26px;
-    left: 16px;
-    top: 758.59px;
-  }
-  .link-3 {
-    width: 236px;
-    height: 54.85px;
-    left: 21px;
-    top: 845.15px;
+  100% {
+    background: url("img/id-profile_smile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
-@media only screen and (max-width: 414px) {
-  .container {
-    width: 414px;
-    height: 896px;
+@media screen and (max-width: 1024px) {
+  .id-card {
+    height: 674px;
+    width: 891px;
+    background: url("img/id-card_1024.svg");
+    background-repeat: no-repeat;
   }
-  .bg {
-    height: 338px;
-    width: 414px;
-    background: url("./img/bg_414.png");
+  .id-name {
+    font-size: 7vw;
   }
-  .header_container {
-    height: 338px;
-    width: 414px;
+  .card-container {
+    margin-top: 0;
   }
-  .flash {
-    width: 242.47px;
-    height: 234px;
-    left: -39px;
-    top: 148px;
+  .roles-title-line {
+    width: 300px;
   }
-  .hand {
-    width: 164.18px;
-    height: 128.67px;
-    left: -0.09px;
-    top: 210.78px;
-    left: -400px;
-    background: url("./img/hand_414.png");
-  }
-  .footer {
-    height: 11.21px;
-    width: 414px;
-    left: 0px;
-    right: 0px;
-    top: 884.89px;
-    font-size: 7px;
-    line-height: 8px;
-  }
-  .profile {
-    width: 233px;
-    height: 228px;
-    left: 0px;
-    top: 110px;
-    background: url("./img/profile_414.png");
-  }
-  #txt.title {
-    width: 160px;
-    height: 146px;
-    left: 230px;
-    top: 154px;
-    font-size: 42px;
-    line-height: 57px;
-  }
-  .hit {
-    height: 104px;
-    left: 24px;
-    right: 264px;
-    top: 392px;
-    font-size: 36px;
-    line-height: 55px;
-  }
-  .separator {
-    height: 0px;
-    left: 0px;
-    right: 0px;
-    top: 338px;
-  }
-  .separator-2 {
-    width: 0px;
-    height: 360.01px;
-    left: 181.31px;
-    top: 405.99px;
-    border: 2px solid #000000;
-  }
-  .skill-1 {
-    height: 57px;
-    left: 216px;
-    right: 19px;
-    top: 362px;
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .skill-2 {
-    height: 57px;
-    left: 216px;
-    right: 19px;
-    top: 458px;
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .skill-3 {
-    height: 57px;
-    left: 216px;
-    right: 19px;
-    top: 555px;
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .skill-4 {
-    height: 57px;
-    left: 216px;
-    right: 19px;
-    top: 652px;
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .skill-5 {
-    height: 57px;
-    left: 216px;
-    right: 19px;
-    top: 749px;
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .icon {
-    width: 30px;
-    height: 30px;
-  }
-  .text-link {
-    font-size: 18px;
-    line-height: 25px;
-  }
-  .link-1 {
-    width: 138px;
-    height: 41.06px;
-    left: 16px;
-    top: 539.4px;
-  }
-  .link-2 {
-    width: 138px;
-    height: 41.06px;
-    left: 16px;
-    top: 606.33px;
-  }
-  .link-3 {
-    width: 138px;
-    height: 41.06px;
-    left: 16px;
-    top: 675.52px;
+  .contact-title-line {
+    width: 400px;
   }
 }
 
-@media only screen and (max-width: 360px) {
-  .container {
-    width: 360px;
-    height: 740px;
+@media screen and (max-width: 768px) {
+  nav > a {
+    font-size: 5vw;
   }
-  .bg {
-    height: 260px;
-    width: 360px;
-    background: url("./img/bg_360.png");
+  .card-container {
+    margin-top: 80px;
   }
-  .header_container {
-    height: 260px;
-    width: 360px;
+  .id-card {
+    width: 300px;
+    height: 693px;
+    background: url("img/id-card_768.svg");
+    background-repeat: no-repeat;
   }
-  .flash {
-    width: 218.64px;
-    height: 211px;
-    left: -35px;
-    top: 91px;
+
+  .id-profile {
+    margin-top: 0px;
   }
-  .hand {
-    width: 148.04px;
-    height: 116.03px;
-    left: 0.09px;
-    top: 147.61px;
-    left: -400px;
-    background: url("./img/hand_360.png");
+
+  .id-name {
+    font-size: 6vw;
   }
-  .footer {
-    height: 11.21px;
-    width: 360px;
-    left: 0px;
-    right: 0px;
-    top: 728.89px;
-    font-size: 7px;
-    line-height: 8px;
+
+  .roles-title-line {
+    display: none;
   }
-  .profile {
-    width: 201px;
-    height: 186px;
-    left: 0px;
-    top: 74px;
-    background: url("./img/profile_360.png");
+  .roles-title,
+  .contact-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    justify-content: center;
+    font-size: 12vw;
   }
-  #txt.title {
-    width: 140px;
-    height: 146px;
-    left: 196px;
-    top: 101px;
-    font-size: 36px;
-    line-height: 49px;
+  .contact-title-line {
+    display: none;
   }
-  .hit {
-    height: 104px;
-    left: 24px;
-    right: 228px;
-    top: 305px;
-    font-size: 24px;
-    line-height: 37px;
+
+  .card-container {
+    height: 70%;
+    flex-direction: column;
   }
-  .separator {
-    height: 0px;
-    left: 0px;
-    right: 0px;
-    top: 260px;
+}
+
+@media screen and (max-width: 600px) {
+  .link-text {
+    display: none;
   }
-  .separator-2 {
-    width: 0px;
-    height: 332.01px;
-    left: 161.66px;
-    top: 322.99px;
-    border: 2px solid #000000;
+  .roles-card-padding {
+    justify-content: space-around;
+    flex-direction: column;
+    height: 90%;
   }
-  .skill-1 {
-    height: 57px;
-    left: 189px;
-    right: 19px;
-    top: 296px;
-    font-size: 18px;
-    line-height: 22px;
+  .roles-body {
+    width: 80%;
+    height: 60%;
   }
-  .skill-2 {
-    height: 57px;
-    left: 189px;
-    right: 19px;
-    top: 380px;
-    font-size: 18px;
-    line-height: 22px;
+  .roles-img {
+    width: 50%;
+    height: 50%;
   }
-  .skill-3 {
-    height: 57px;
-    left: 189px;
-    right: 19px;
-    top: 464px;
-    font-size: 18px;
-    line-height: 22px;
+
+  .id-name {
+    font-size: 12vw;
+    line-height: 100%;
   }
-  .skill-4 {
-    height: 57px;
-    left: 189px;
-    right: 19px;
-    top: 548px;
-    font-size: 18px;
-    line-height: 22px;
+  .roles-subtitle {
+    font-size: 7vw;
+    line-height: 100%;
   }
-  .skill-5 {
-    height: 57px;
-    left: 189px;
-    right: 19px;
-    top: 632px;
-    font-size: 18px;
-    line-height: 22px;
+  .roles-text {
+    font-size: 6vw;
+    line-height: 100%;
   }
-  .icon {
-    width: 26px;
-    height: 26px;
-  }
-  .text-link {
-    font-size: 18px;
-    line-height: 25px;
-  }
-  .link-1 {
-    width: 123px;
-    height: 33.91px;
-    left: 16px;
-    top: 420.49px;
-  }
-  .link-2 {
-    width: 128px;
-    height: 33.91px;
-    left: 16px;
-    top: 475.77px;
-  }
-  .link-3 {
-    width: 124px;
-    height: 34.1px;
-    left: 18px;
-    top: 532.9px;
+  .instagram,
+  .linkedin,
+  .email {
+    width: 70%;
+    height: 70%;
   }
 }
